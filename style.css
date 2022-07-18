@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --clr-primary: #2d3248;
+    --clr-secondary: #6a6f81;
+    --clr-secondary: #969696;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.8rem;
+    background-color: hsl(185, 75%, 39%);
+    color: var(--clr-primary);
+}
+
+.container {
+    padding: 100px 0;
+    position: relative;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.bg-top,
+.bg-bottom {
+    z-index: -1;
+    position: absolute;
+}
+
+.bg-top {
+    top: -35%;
+    left: -40%;
+    width: 100%;
+}
+
+.bg-bottom {
+    bottom: -35%;
+    right: -40%;
+    width: 100%;
+}
+
+.card {
+    width: 90%;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+    padding: 0 0 3rem;
+    margin: 0 auto;
+    box-shadow: 1px 1px 8px 2px #46464646;
+    /* z-index: 2; */
+}
+
+@media screen and (min-width:900px) {
+    .container {
+        overflow: hidden;
+    }
+
+    .card {
+        width: 25%;
+    }
+
+    .bg-top {
+        top: -125%;
+        left: -45%;
+    }
+
+    .bg-bottom {
+        bottom: -145%;
+        right: -55%;
+    }
+
+
+}
+
+.card-bg {
+    background-image: url(./images/bg-pattern-card.svg);
+    background-size: cover;
+    height: 150px;
+}
+
+.card-content {
+    position: relative;
+}
+
+.card-img {
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.name {
+    margin-top: 7rem;
+    display: inline-block;
+}
+
+.age {
+    color: var(--clr-secondary);
+}
+
+small {
+    display: block;
+    color: var(--clr-secondary);
+    margin-bottom: 2rem;
+}
+
+.stats {
+    border-top: 1px solid gray;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    flex-basis: 100%;
+}
+
+ul:first-child {
+    margin-top: 3rem;
+    font-weight: 700;
+}
+
+ul:last-child {
+    font-size: 1.5rem;
+    color: var(--clr-secondary);
+}
